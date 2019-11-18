@@ -10,6 +10,10 @@ class Book(models.Model):
     in_stock = models.BooleanField()
     description = models.TextField()
 
+    def __str__(self):
+        return self.title
+    
+
 class Transaction(models.Model):
     date_purchased = models.DateField(datetime.now())
     action = models.TextField()
