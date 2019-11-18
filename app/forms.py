@@ -23,4 +23,9 @@ class SignUpForm(forms.ModelForm):
 
     def signup(self, request):
         self.cleaned_data.pop("repeat_password")
+<<<<<<< HEAD
         return User.objects.create_user(**self.cleaned_data)
+=======
+        return User.objects.create_user(**self.cleaned_data)
+
+>>>>>>> d6a46bc8c36ee9824215c32196b0077558c85bea
